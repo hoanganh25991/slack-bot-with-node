@@ -15,6 +15,7 @@ app.listen(port, function () {
 });
 
 app.post('/hello', function (req, res, next) {
+  return res.status(200).json(req);
   var userName = req.body.user_name;
   var botPayload = {
     text : 'Hello ' + userName + ', welcome to `redoc`! I\'ll be your guide.'
